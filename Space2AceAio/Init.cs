@@ -48,7 +48,7 @@ namespace Space2Ace
         private static void Initialize(EventArgs args)
         {
 
-            Notifications.Show(new SimpleNotification("Space2Ace", "Draven,Jinx,Kindred,Lucian,Lux,Ryze,Soraka,Vayne,Zed"), 20000);
+            Notifications.Show(new SimpleNotification("Space2Ace", "Draven,Jinx,Kindred,Lucian,Lux,Ryze,Soraka,Vayne,Yaszo,Zed"), 20000);
 
             Loader.Menu();
 
