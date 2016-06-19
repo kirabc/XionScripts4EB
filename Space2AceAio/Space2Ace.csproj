@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BBF3B83-0921-40D0-A42D-FCD4D7D8F98D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Space2Ace</RootNamespace>
+    <AssemblyName>Space2Ace</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Space2Ace.Init</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EloBuddy">
+      <HintPath>C:\Program Files (x86)\EloBuddy\System\EloBuddy.dll</HintPath>
+    </Reference>
+    <Reference Include="EloBuddy.Sandbox">
+      <HintPath>C:\Program Files (x86)\EloBuddy\System\EloBuddy.Sandbox.dll</HintPath>
+    </Reference>
+    <Reference Include="EloBuddy.SDK">
+      <HintPath>C:\Program Files (x86)\EloBuddy\System\EloBuddy.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\EloBuddy\System\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\EloBuddy\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\EloBuddy\System\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="Xionlunix.Common">
+      <HintPath>..\XionBuddyCommon\bin\Release\Xionlunix.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Champion\Draven\Program.cs" />
+    <Compile Include="Champion\Draven\Utils.cs" />
+    <Compile Include="Champion\Jinx\Program.cs" />
+    <Compile Include="Champion\Katarina\Program.cs" />
+    <Compile Include="Champion\Kindred\Helper.cs" />
+    <Compile Include="Champion\Kindred\Language.cs" />
+    <Compile Include="Champion\Kindred\Program.cs" />
+    <Compile Include="Champion\Kindred\Spell Database\SpellData.cs" />
+    <Compile Include="Champion\Kindred\Spell Database\SpellDatabase.cs" />
+    <Compile Include="Champion\Lucian\CustomAntiGapcloser.cs" />
+    <Compile Include="Champion\Lucian\Helper.cs" />
+    <Compile Include="Champion\Lucian\LucianCalculator.cs" />
+    <Compile Include="Champion\Lucian\LucianDrawing.cs" />
+    <Compile Include="Champion\Lucian\LucianMenu.cs" />
+    <Compile Include="Champion\Lucian\LucianSpells.cs" />
+    <Compile Include="Champion\Lucian\Program.cs" />
+    <Compile Include="Champion\Lux\Program.cs" />
+    <Compile Include="Champion\Ryze\AutoLevelManager.cs" />
+    <Compile Include="Champion\Ryze\Champion.cs" />
+    <Compile Include="Champion\Ryze\DrawManager.cs" />
+    <Compile Include="Champion\Ryze\GlobalManager.cs" />
+    <Compile Include="Champion\Ryze\Humanizer.cs" />
+    <Compile Include="Champion\Ryze\ItemManager.cs" />
+    <Compile Include="Champion\Ryze\LaneOptions.cs" />
+    <Compile Include="Champion\Ryze\MenuManager.cs" />
+    <Compile Include="Champion\Ryze\Program.cs" />
+    <Compile Include="Champion\Soraka\Plugins\Soraka.cs" />
+    <Compile Include="Champion\Soraka\Program.cs" />
+    <Compile Include="Champion\Soraka\CSPlugin.cs" />
+    <Compile Include="Champion\Soraka\Utils\FileOperations.cs" />
+    <Compile Include="Champion\Soraka\Utils\Geometry.cs" />
+    <Compile Include="Champion\Soraka\Utils\HpBarDamageIndicator.cs" />
+    <Compile Include="Champion\Soraka\Utils\Misc.cs" />
+    <Compile Include="Champion\Soraka\Utils\VectorHelper.cs" />
+    <Compile Include="Champion\Vayne\Program.cs" />
+    <Compile Include="Champion\Zed\Dangerous_Spells.cs" />
+    <Compile Include="Champion\Zed\Program.cs" />
+    <Compile Include="Libraries\DZLib\Core\DZAntigapcloser.cs" />
+    <Compile Include="Libraries\DZLib\Core\DZInterrupter.cs" />
+    <Compile Include="Libraries\DZLib\Geometry\DZGeometry.cs" />
+    <Compile Include="Libraries\DZLib\Geometry\DZPolygon.cs" />
+    <Compile Include="Libraries\DZLib\Hero\HeroExtensions.cs" />
+    <Compile Include="Libraries\DZLib\Positioning\PositioningHelper.cs" />
+    <Compile Include="Libraries\DZLib\Positioning\SafePosition.cs" />
+    <Compile Include="Libraries\ElEasy\IPlugin.cs" />
+    <Compile Include="Libraries\OKTW - Core\Activator.cs" />
+    <Compile Include="Libraries\OKTW - Core\AutoLvlUp.cs" />
+    <Compile Include="Libraries\OKTW - Core\MissileReturn.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWdash.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWdraws.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWtracker.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWward.cs" />
+    <Compile Include="Libraries\Scomon\Damage\AutoAttack.cs" />
+    <Compile Include="Libraries\Scomon\Damage\Prediction.cs" />
+    <Compile Include="Libraries\Scomon\Database\Data.cs" />
+    <Compile Include="Libraries\Scomon\Database\Enumarations.cs" />
+    <Compile Include="Libraries\Scomon\Database\SpellDatabase.cs" />
+    <Compile Include="Libraries\Scomon\Database\Structures.cs" />
+    <Compile Include="Libraries\Scomon\Evade\Evader.cs" />
+    <Compile Include="Libraries\Scomon\Evade\ObjectPool.cs" />
+    <Compile Include="Libraries\Scomon\Evade\TargetedSpellDetector.cs" />
+    <Compile Include="Libraries\Scomon\Evade\TargetedSpellEvader.cs" />
+    <Compile Include="Libraries\Scomon\Helpers\SoldierMgr.cs" />
+    <Compile Include="Libraries\Scomon\Maths\ClipperWrapper.cs" />
+    <Compile Include="Libraries\Scomon\Maths\Geometry.cs" />
+    <Compile Include="Libraries\Scomon\MenueUtils\MenuLanguage.cs" />
+    <Compile Include="Libraries\Scomon\Orbwalking\ConfigMenu.cs" />
+    <Compile Include="Libraries\Scomon\Orbwalking\Drawings.cs" />
+    <Compile Include="Libraries\Scomon\Orbwalking\Events.cs" />
+    <Compile Include="Libraries\Scomon\Orbwalking\Orbwalker.cs" />
+    <Compile Include="Libraries\Scomon\Orbwalking\Utility.cs" />
+    <Compile Include="Libraries\Scomon\Packet\PacketDebug.cs" />
+    <Compile Include="Libraries\Scomon\Packet\PacketHandler.cs" />
+    <Compile Include="Libraries\Scomon\PluginBase\Champion.cs" />
+    <Compile Include="Libraries\Scomon\PluginBase\IChampion.cs" />
+    <Compile Include="Libraries\Scomon\TS\ConfigMenu.cs" />
+    <Compile Include="Libraries\Scomon\TS\TargetSelector.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Movement.cs" />
+    <Compile Include="Init.cs" />
+    <Compile Include="Libraries\DZLib\Modules\IModule.cs" />
+    <Compile Include="Libraries\DZLib\Modules\ModuleEnum.cs" />
+    <Compile Include="Libraries\Sprediction\ArcPrediction.cs" />
+    <Compile Include="Libraries\Sprediction\CirclePrediction.cs" />
+    <Compile Include="Libraries\Sprediction\ClipperWrapper.cs" />
+    <Compile Include="Libraries\Sprediction\Collision.cs" />
+    <Compile Include="Libraries\Sprediction\ConePrediction.cs" />
+    <Compile Include="Libraries\Sprediction\ConfigMenu.cs" />
+    <Compile Include="Libraries\Sprediction\Drawings.cs" />
+    <Compile Include="Libraries\Sprediction\Geometry.cs" />
+    <Compile Include="Libraries\Sprediction\LinePrediction.cs" />
+    <Compile Include="Libraries\Sprediction\Obj_AI_HeroExtensions.cs" />
+    <Compile Include="Libraries\Sprediction\PathTracker.cs" />
+    <Compile Include="Libraries\Sprediction\Prediction.cs" />
+    <Compile Include="Libraries\Sprediction\RingPrediction.cs" />
+    <Compile Include="Libraries\Sprediction\SpellExtensions.cs" />
+    <Compile Include="Libraries\Sprediction\StasisPrediction.cs" />
+    <Compile Include="Libraries\Sprediction\Utility.cs" />
+    <Compile Include="Libraries\Sprediction\VectorPrediction.cs" />
+    <Compile Include="Libraries\TreeLib\Champion.cs" />
+    <Compile Include="Libraries\TreeLib\CustomAntiGapcloser.cs" />
+    <Compile Include="Libraries\TreeLib\CustomInterrupter.cs" />
+    <Compile Include="Libraries\TreeLib\DrawingExtensions.cs" />
+    <Compile Include="Libraries\TreeLib\GameObjectExtrension.cs" />
+    <Compile Include="Libraries\TreeLib\GeneralExtention.cs" />
+    <Compile Include="Libraries\TreeLib\IgniteManager.cs" />
+    <Compile Include="Libraries\TreeLib\ManaIndicator.cs" />
+    <Compile Include="Libraries\TreeLib\ManaManager.cs" />
+    <Compile Include="Libraries\TreeLib\SmiteManager.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\Collision.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\Config.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\Evade.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\Geometry.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\Skillshot.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\SkillshotDetector.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\SpellData.cs" />
+    <Compile Include="Libraries\TreeLib\SpellData\SpellDatabase.cs" />
+    <Compile Include="Libraries\TreeLib\SpellExtention.cs" />
+    <Compile Include="Libraries\TreeLib\SpellManager.cs" />
+    <Compile Include="Libraries\TreeLib\UnitExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Cache.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\HealthPrediction.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\OktwCommon.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Orbwalking.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\PredictionOktw.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SPRITES\EloDisplayer\EloDisplayer.Designer.cs" />
+    <Compile Include="Utility\AutoSkiller\Program.cs" />
+    <Compile Include="Utility\BaseUlt3\BaseUlt.cs" />
+    <Compile Include="Utility\Prediction\EventHandlers.cs" />
+    <Compile Include="Utility\Prediction\Program.cs" />
+    <Compile Include="Utility\Prediction\XionCommon\Utility.cs" />
+    <Compile Include="Utility\Prediction\SpellData.cs" />
+    <Compile Include="Utility\Prediction\SpellDatabase.cs" />
+    <Compile Include="Utility\Prediction\Space2AcePrediction.cs" />
+    <Compile Include="Utility\Xionivator\Entry.cs" />
+    <Compile Include="Utility\Xionivator\IPlugin.cs" />
+    <Compile Include="Utility\Xionivator\Items\Defensive2.cs" />
+    <Compile Include="Utility\Xionivator\Items\DefensiveItems\FaceOfTheMountain.cs" />
+    <Compile Include="Utility\Xionivator\Items\DefensiveItems\Locket.cs" />
+    <Compile Include="Utility\Xionivator\Items\DefensiveItems\Randuins.cs" />
+    <Compile Include="Utility\Xionivator\Items\DefensiveItems\Seraphs.cs" />
+    <Compile Include="Utility\Xionivator\Items\DefensiveItems\Talisman.cs" />
+    <Compile Include="Utility\Xionivator\Items\Item.cs" />
+    <Compile Include="Utility\Xionivator\Items\Offensive2.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\Botrk.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\Cutlass.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\FrostQueen.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\Hextech.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\HextechGLP-800.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\HextechProtobelt-01.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\Hydra.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\Tiamat.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\TitanicHydra.cs" />
+    <Compile Include="Utility\Xionivator\Items\OffensiveItems\Youmuu.cs" />
+    <Compile Include="Utility\Xionivator\Items\Potions.cs" />
+    <Compile Include="Utility\Xionivator\Items\Zhonya.cs" />
+    <Compile Include="Utility\Xionivator\Others\TurnAround.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Barrier.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Cleanse.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Exhaust.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Heal.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Ignite.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Mark.cs" />
+    <Compile Include="Utility\Xionivator\Summoners\Smite.cs" />
+    <Compile Include="Utility\Xionivator\Trackers\BuildingTracker.cs" />
+    <Compile Include="Utility\Xionivator\Trackers\CooldownTracker.cs" />
+    <Compile Include="Utility\Xionivator\Trackers\JungleTracker.cs" />
+    <Compile Include="Utility\Xionivator\Utility\AntiStealth.cs" />
+    <Compile Include="Utility\Xionivator\Utility\AutoLantern.cs" />
+    <Compile Include="Utility\Xionivator\Utility\BlueTrinket.cs" />
+    <Compile Include="Utility\Xionivator\Utility\Flash.cs" />
+    <Compile Include="Utility\Xionivator\Utility\UltimateLeveler.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\BitmapExtensions.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\FloatExtensions.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\FontExtension.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\GameObjects.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\ImageLoader.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\MDrawing.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\SpriteExtension.cs" />
+    <Compile Include="Utility\Xionivator\Vendor\SFX\VectorExtensions.cs" />
+    <Compile Include="Utility\SpellTracker\Programm.cs" />
+    <Compile Include="Utility\SpellTracker\SpellTracker.cs" />
+    <Compile Include="Utility\SpellTracker\Tracker\ExpTracker.cs" />
+    <Compile Include="Utility\SpellTracker\Utilities\Entities\GameObjects.cs" />
+    <Compile Include="Utility\SpellTracker\Utilities\Entities\Jungle.cs" />
+    <Compile Include="Utility\SpellTracker\Utilities\Helpers\Drawings.cs" />
+    <Compile Include="Utility\SpellTracker\Utilities\Properties\Menue.cs" />
+    <Compile Include="Utility\SpellTracker\Utilities\Variables.cs" />
+    <Compile Include="Utility\SpellTracker\Utilities\WardTracker.cs" />
+    <Compile Include="Utility\TrapTracker\Program.cs" />
+    <Compile Include="Utility\God Jungle Tracker\Classes\Jungle.cs" />
+    <Compile Include="Utility\God Jungle Tracker\Classes\Packets.cs" />
+    <Compile Include="Utility\God Jungle Tracker\Program.cs" />
+    <Compile Include="Utility\Humanizer\Extensions.cs" />
+    <Compile Include="Utility\Humanizer\Program.cs" />
+    <Compile Include="Utility\Loader.cs" />
+    <Compile Include="Utility\RandomUlt\Helpers\LastPositions.cs" />
+    <Compile Include="Utility\RandomUlt\Program.cs" />
+    <Compile Include="Utility\SebbyBanWars\Program.cs" />
+    <Compile Include="Utility\SkinHack\Program.cs" />
+    <Compile Include="Utility\SkinSDK\MenuConfig.cs" />
+    <Compile Include="Utility\SkinSDK\Program.cs" />
+    <Compile Include="Utility\TheCheater\IDetector.cs" />
+    <Compile Include="Utility\TheCheater\LeaguesharpOrbwalkDetector.cs" />
+    <Compile Include="Utility\TheCheater\SacOrbwalkerDetector.cs" />
+    <Compile Include="Utility\TheCheater\TheCheater.cs" />
+    <Compile Include="Utility\GankTracker\Program.cs" />
+    <Compile Include="Utility\PingBlock\Program.cs" />
+    <Compile Include="Utility\RecallTracker\Program.cs" />
+    <Compile Include="Utility\XionVade\Collision.cs" />
+    <Compile Include="Utility\XionVade\Config.cs" />
+    <Compile Include="Utility\XionVade\EarlyEvade.cs" />
+    <Compile Include="Utility\XionVade\Evader.cs" />
+    <Compile Include="Utility\XionVade\EvadeSpellData.cs" />
+    <Compile Include="Utility\XionVade\EvadeSpellDatabase.cs" />
+    <Compile Include="Utility\XionVade\Geometry.cs" />
+    <Compile Include="Utility\XionVade\Helpers.cs" />
+    <Compile Include="Utility\XionVade\Pathfinding\Core.cs" />
+    <Compile Include="Utility\XionVade\Pathfinding\Node.cs" />
+    <Compile Include="Utility\XionVade\Pathfinding\Path.cs" />
+    <Compile Include="Utility\XionVade\Pathfinding\PathFollower.cs" />
+    <Compile Include="Utility\XionVade\Pathfinding\PriorityQueue.cs" />
+    <Compile Include="Utility\XionVade\Pathfinding\Utils.cs" />
+    <Compile Include="Utility\XionVade\Program.cs" />
+    <Compile Include="Utility\XionVade\Skillshot.cs" />
+    <Compile Include="Utility\XionVade\SkillshotDetector.cs" />
+    <Compile Include="Utility\XionVade\SpellBlocker.cs" />
+    <Compile Include="Utility\XionVade\SpellData.cs" />
+    <Compile Include="Utility\XionVade\SpellDatabase.cs" />
+    <Compile Include="Utility\XionVade\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\ChampionData\Aatrox.json" />
+    <None Include="Resources\ChampionData\Ahri.json" />
+    <None Include="Resources\ChampionData\Akali.json" />
+    <None Include="Resources\ChampionData\Alistar.json" />
+    <None Include="Resources\ChampionData\Amumu.json" />
+    <None Include="Resources\ChampionData\Anivia.json" />
+    <None Include="Resources\ChampionData\Annie.json" />
+    <None Include="Resources\ChampionData\Ashe.json" />
+    <None Include="Resources\ChampionData\AurelionSol.json" />
+    <None Include="Resources\ChampionData\Azir.json" />
+    <None Include="Resources\ChampionData\Bard.json" />
+    <None Include="Resources\ChampionData\Blitzcrank.json" />
+    <None Include="Resources\ChampionData\Brand.json" />
+    <None Include="Resources\ChampionData\Braum.json" />
+    <None Include="Resources\ChampionData\Caitlyn.json" />
+    <None Include="Resources\ChampionData\Cassiopeia.json" />
+    <None Include="Resources\ChampionData\Chogath.json" />
+    <None Include="Resources\ChampionData\Corki.json" />
+    <None Include="Resources\ChampionData\Darius.json" />
+    <None Include="Resources\ChampionData\Diana.json" />
+    <None Include="Resources\ChampionData\Draven.json" />
+    <None Include="Resources\ChampionData\DrMundo.json" />
+    <None Include="Resources\ChampionData\Ekko.json" />
+    <None Include="Resources\ChampionData\Elise.json" />
+    <None Include="Resources\ChampionData\Evelynn.json" />
+    <None Include="Resources\ChampionData\Ezreal.json" />
+    <None Include="Resources\ChampionData\FiddleSticks.json" />
+    <None Include="Resources\ChampionData\Fiora.json" />
+    <None Include="Resources\ChampionData\Fizz.json" />
+    <None Include="Resources\ChampionData\Galio.json" />
+    <None Include="Resources\ChampionData\Gangplank.json" />
+    <None Include="Resources\ChampionData\Garen.json" />
+    <None Include="Resources\ChampionData\Gnar.json" />
+    <None Include="Resources\ChampionData\Gragas.json" />
+    <None Include="Resources\ChampionData\Graves.json" />
+    <None Include="Resources\ChampionData\Hecarim.json" />
+    <None Include="Resources\ChampionData\Heimerdinger.json" />
+    <None Include="Resources\ChampionData\Illaoi.json" />
+    <None Include="Resources\ChampionData\Irelia.json" />
+    <None Include="Resources\ChampionData\Janna.json" />
+    <None Include="Resources\ChampionData\JarvanIV.json" />
+    <None Include="Resources\ChampionData\Jax.json" />
+    <None Include="Resources\ChampionData\Jayce.json" />
+    <None Include="Resources\ChampionData\Jhin.json" />
+    <None Include="Resources\ChampionData\Jinx.json" />
+    <None Include="Resources\ChampionData\Kalista.json" />
+    <None Include="Resources\ChampionData\Karma.json" />
+    <None Include="Resources\ChampionData\Karthus.json" />
+    <None Include="Resources\ChampionData\Kassadin.json" />
+    <None Include="Resources\ChampionData\Katarina.json" />
+    <None Include="Resources\ChampionData\Kayle.json" />
+    <None Include="Resources\ChampionData\Kennen.json" />
+    <None Include="Resources\ChampionData\Khazix.json" />
+    <None Include="Resources\ChampionData\Kindred.json" />
+    <None Include="Resources\ChampionData\KogMaw.json" />
+    <None Include="Resources\ChampionData\Leblanc.json" />
+    <None Include="Resources\ChampionData\LeeSin.json" />
+    <None Include="Resources\ChampionData\Leona.json" />
+    <None Include="Resources\ChampionData\Lissandra.json" />
+    <None Include="Resources\ChampionData\Lucian.json" />
+    <None Include="Resources\ChampionData\Lulu.json" />
+    <None Include="Resources\ChampionData\Lux.json" />
+    <None Include="Resources\ChampionData\Malphite.json" />
+    <None Include="Resources\ChampionData\Malzahar.json" />
+    <None Include="Resources\ChampionData\Maokai.json" />
+    <None Include="Resources\ChampionData\MasterYi.json" />
+    <None Include="Resources\ChampionData\MissFortune.json" />
+    <None Include="Resources\ChampionData\MonkeyKing.json" />
+    <None Include="Resources\ChampionData\Mordekaiser.json" />
+    <None Include="Resources\ChampionData\Morgana.json" />
+    <None Include="Resources\ChampionData\Nami.json" />
+    <None Include="Resources\ChampionData\Nasus.json" />
+    <None Include="Resources\ChampionData\Nautilus.json" />
+    <None Include="Resources\ChampionData\Nidalee.json" />
+    <None Include="Resources\ChampionData\Nocturne.json" />
+    <None Include="Resources\ChampionData\Nunu.json" />
+    <None Include="Resources\ChampionData\Olaf.json" />
+    <None Include="Resources\ChampionData\Orianna.json" />
+    <None Include="Resources\ChampionData\Pantheon.json" />
+    <None Include="Resources\ChampionData\Poppy.json" />
+    <None Include="Resources\ChampionData\Quinn.json" />
+    <None Include="Resources\ChampionData\Rammus.json" />
+    <None Include="Resources\ChampionData\RekSai.json" />
+    <None Include="Resources\ChampionData\Renekton.json" />
+    <None Include="Resources\ChampionData\Rengar.json" />
+    <None Include="Resources\ChampionData\Riven.json" />
+    <None Include="Resources\ChampionData\Rumble.json" />
+    <None Include="Resources\ChampionData\Ryze.json" />
+    <None Include="Resources\ChampionData\Sejuani.json" />
+    <None Include="Resources\ChampionData\Shaco.json" />
+    <None Include="Resources\ChampionData\Shen.json" />
+    <None Include="Resources\ChampionData\Shyvana.json" />
+    <None Include="Resources\ChampionData\Singed.json" />
+    <None Include="Resources\ChampionData\Sion.json" />
+    <None Include="Resources\ChampionData\Sivir.json" />
+    <None Include="Resources\ChampionData\Skarner.json" />
+    <None Include="Resources\ChampionData\Sona.json" />
+    <None Include="Resources\ChampionData\Soraka.json" />
+    <None Include="Resources\ChampionData\Swain.json" />
+    <None Include="Resources\ChampionData\Syndra.json" />
+    <None Include="Resources\ChampionData\TahmKench.json" />
+    <None Include="Resources\ChampionData\Talon.json" />
+    <None Include="Resources\ChampionData\Taric.json" />
+    <None Include="Resources\ChampionData\Teemo.json" />
+    <None Include="Resources\ChampionData\Thresh.json" />
+    <None Include="Resources\ChampionData\Tristana.json" />
+    <None Include="Resources\ChampionData\Trundle.json" />
+    <None Include="Resources\ChampionData\Tryndamere.json" />
+    <None Include="Resources\ChampionData\TwistedFate.json" />
+    <None Include="Resources\ChampionData\Twitch.json" />
+    <None Include="Resources\ChampionData\Udyr.json" />
+    <None Include="Resources\ChampionData\Urgot.json" />
+    <None Include="Resources\ChampionData\Varus.json" />
+    <None Include="Resources\ChampionData\Vayne.json" />
+    <None Include="Resources\ChampionData\Veigar.json" />
+    <None Include="Resources\ChampionData\Velkoz.json" />
+    <None Include="Resources\ChampionData\Vi.json" />
+    <None Include="Resources\ChampionData\Viktor.json" />
+    <None Include="Resources\ChampionData\Vladimir.json" />
+    <None Include="Resources\ChampionData\Volibear.json" />
+    <None Include="Resources\ChampionData\Warwick.json" />
+    <None Include="Resources\ChampionData\Xerath.json" />
+    <None Include="Resources\ChampionData\XinZhao.json" />
+    <None Include="Resources\ChampionData\Yasuo.json" />
+    <None Include="Resources\ChampionData\Yorick.json" />
+    <None Include="Resources\ChampionData\Zac.json" />
+    <None Include="Resources\ChampionData\Zed.json" />
+    <None Include="Resources\ChampionData\Ziggs.json" />
+    <None Include="Resources\ChampionData\Zilean.json" />
+    <None Include="Resources\ChampionData\Zyra.json" />
+    <None Include="Resources\DamageData\6.8.json" />
+    <None Include="Resources\SpellDatabase.json" />
+    <None Include="Resources\Thumbs.db" />
+    <None Include="Resources\TrapLocationsData.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SPRITES\EloDisplayer\EloDisplayer.resx" />
+    <EmbeddedResource Include="Resources\TRANSLATIONS\Translation-de-DE.resx" />
+    <EmbeddedResource Include="Resources\TRANSLATIONS\Translation-en-US.resx" />
+    <EmbeddedResource Include="Resources\TRANSLATIONS\Translation-fr-FR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChampionData.json" />
+    <None Include="Resources\Data\6.6.json" />
+    <None Include="Resources\Data\6.7.json" />
+    <None Include="Resources\Data\Database.json" />
+    <None Include="Resources\Data\Gapclosers.json" />
+    <None Include="Resources\Data\GlobalInterruptableSpellsList.json" />
+    <None Include="Resources\Data\InterruptableSpells.json" />
+    <None Include="Resources\Data\Map.json" />
+    <None Include="Resources\Data\Priority.json" />
+    <None Include="Resources\FlashJukeData.json" />
+    <None Include="Resources\GapcloserData.json" />
+    <None Include="Resources\GlobalInterruptableSpellData.json" />
+    <None Include="Resources\InterruptableSpellsData.json" />
+    <None Include="Resources\intro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\denymouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ItemData.json" />
+    <None Include="Resources\MapData.json" />
+    <None Include="Resources\mouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PriorityData.json" />
+    <None Include="Resources\RecallBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3f3bb8b4-114c-11e6-8c69-6490a00d3c3f.gif" />
+    <None Include="Resources\Aatrox.png" />
+    <None Include="Resources\Ahri.png" />
+    <None Include="Resources\Akali.png" />
+    <None Include="Resources\Alistar.png" />
+    <None Include="Resources\Amumu.png" />
+    <None Include="Resources\Anivia.png" />
+    <None Include="Resources\Annie.png" />
+    <None Include="Resources\Ashe.png" />
+    <None Include="Resources\Azir.png" />
+    <None Include="Resources\Bard.png" />
+    <None Include="Resources\Blitzcrank.png" />
+    <None Include="Resources\Brand.png" />
+    <None Include="Resources\Braum.png" />
+    <None Include="Resources\Caitlyn.png" />
+    <None Include="Resources\Cassiopeia.png" />
+    <None Include="Resources\Chogath.png" />
+    <None Include="Resources\Corki.png" />
+    <None Include="Resources\Darius.png" />
+    <None Include="Resources\Diana.png" />
+    <None Include="Resources\Draven.png" />
+    <None Include="Resources\DrMundo.png" />
+    <None Include="Resources\Ekko.png" />
+    <None Include="Resources\Elise.png" />
+    <None Include="Resources\Evelynn.png" />
+    <None Include="Resources\Ezreal.png" />
+    <None Include="Resources\FiddleSticks.png" />
+    <None Include="Resources\Fiora.png" />
+    <None Include="Resources\Fizz.png" />
+    <None Include="Resources\Galio.png" />
+    <None Include="Resources\Gangplank.png" />
+    <None Include="Resources\Garen.png" />
+    <None Include="Resources\Gnar.png" />
+    <None Include="Resources\Gragas.png" />
+    <None Include="Resources\Graves.png" />
+    <None Include="Resources\Hecarim.png" />
+    <None Include="Resources\Heimerdinger.png" />
+    <None Include="Resources\Illaoi.png" />
+    <Content Include="Resources\Images\cursor_drag.png" />
+    <Content Include="Resources\Images\notifications_arrow.png" />
+    <Content Include="Resources\Images\notifications_check.png" />
+    <Content Include="Resources\Images\notifications_error.png" />
+    <Content Include="Resources\Images\notifications_select.png" />
+    <Content Include="Resources\Images\notifications_star.png" />
+    <Content Include="Resources\Images\notifications_warning.png" />
+    <None Include="Resources\PortLogo.png" />
+    <None Include="Resources\Irelia.png" />
+    <None Include="Resources\Janna.png" />
+    <None Include="Resources\JarvanIV.png" />
+    <None Include="Resources\Jax.png" />
+    <None Include="Resources\Jayce.png" />
+    <None Include="Resources\jhin.png" />
+    <None Include="Resources\Jinx.png" />
+    <None Include="Resources\Kalista.png" />
+    <None Include="Resources\Karma.png" />
+    <None Include="Resources\Karthus.png" />
+    <None Include="Resources\Kassadin.png" />
+    <None Include="Resources\Katarina.png" />
+    <None Include="Resources\Kayle.png" />
+    <None Include="Resources\Kennen.png" />
+    <None Include="Resources\Khazix.png" />
+    <None Include="Resources\Kindred.png" />
+    <None Include="Resources\KogMaw.png" />
+    <None Include="Resources\Leblanc.png" />
+    <None Include="Resources\LeeSin.png" />
+    <None Include="Resources\Leona.png" />
+    <None Include="Resources\Lissandra.png" />
+    <None Include="Resources\LP_Default.png" />
+    <None Include="Resources\LP_Teleport.png" />
+    <None Include="Resources\Lucian.png" />
+    <None Include="Resources\Lulu.png" />
+    <None Include="Resources\Lux.png" />
+    <None Include="Resources\Malphite.png" />
+    <None Include="Resources\Malzahar.png" />
+    <None Include="Resources\Maokai.png" />
+    <None Include="Resources\MasterYi.png" />
+    <None Include="Resources\MissFortune.png" />
+    <None Include="Resources\MonkeyKing.png" />
+    <None Include="Resources\Mordekaiser.png" />
+    <None Include="Resources\Morgana.png" />
+    <None Include="Resources\Nami.png" />
+    <None Include="Resources\Nasus.png" />
+    <None Include="Resources\Nautilus.png" />
+    <None Include="Resources\Nidalee.png" />
+    <None Include="Resources\Nocturne.png" />
+    <None Include="Resources\Nunu.png" />
+    <None Include="Resources\Olaf.png" />
+    <None Include="Resources\Orianna.png" />
+    <None Include="Resources\Pantheon.png" />
+    <None Include="Resources\Poppy.png" />
+    <None Include="Resources\Quinn.png" />
+    <None Include="Resources\Rammus.png" />
+    <None Include="Resources\RekSai.png" />
+    <None Include="Resources\Renekton.png" />
+    <None Include="Resources\Rengar.png" />
+    <None Include="Resources\Riven.png" />
+    <None Include="Resources\Rumble.png" />
+    <None Include="Resources\Ryze.png" />
+    <None Include="Resources\Sejuani.png" />
+    <None Include="Resources\Shaco.png" />
+    <None Include="Resources\Shen.png" />
+    <None Include="Resources\Shyvana.png" />
+    <None Include="Resources\Singed.png" />
+    <None Include="Resources\Sion.png" />
+    <None Include="Resources\Sivir.png" />
+    <None Include="Resources\Skarner.png" />
+    <None Include="Resources\Sona.png" />
+    <None Include="Resources\Soraka.png" />
+    <Content Include="Resources\SPRITES\EloDisplayer\EloGui.png" />
+    <None Include="Resources\Swain.png" />
+    <None Include="Resources\Syndra.png" />
+    <None Include="Resources\TahmKench.png" />
+    <None Include="Resources\taliyah.png" />
+    <None Include="Resources\Talon.png" />
+    <None Include="Resources\Taric.png" />
+    <None Include="Resources\Teemo.png" />
+    <None Include="Resources\Thresh.png" />
+    <None Include="Resources\Tristana.png" />
+    <None Include="Resources\Trundle.png" />
+    <None Include="Resources\Tryndamere.png" />
+    <None Include="Resources\TwistedFate.png" />
+    <None Include="Resources\Twitch.png" />
+    <None Include="Resources\Udyr.png" />
+    <None Include="Resources\Urgot.png" />
+    <None Include="Resources\Varus.png" />
+    <None Include="Resources\Vayne.png" />
+    <None Include="Resources\Veigar.png" />
+    <None Include="Resources\Velkoz.png" />
+    <None Include="Resources\Vi.png" />
+    <None Include="Resources\Viktor.png" />
+    <None Include="Resources\Vladimir.png" />
+    <None Include="Resources\Volibear.png" />
+    <None Include="Resources\Warwick.png" />
+    <None Include="Resources\Xerath.png" />
+    <None Include="Resources\XinZhao.png" />
+    <None Include="Resources\Yasuo.png" />
+    <None Include="Resources\Yorick.png" />
+    <None Include="Resources\Zac.png" />
+    <None Include="Resources\Zed.png" />
+    <None Include="Resources\Ziggs.png" />
+    <None Include="Resources\Zilean.png" />
+    <None Include="Resources\Zyra.png" />
+    <None Include="Resources\Minimap_Ward_Pink_Enemy.png" />
+    <None Include="Resources\Minimap_Ward_Green_Enemy.png" />
+    <None Include="Resources\ScopeSprite.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

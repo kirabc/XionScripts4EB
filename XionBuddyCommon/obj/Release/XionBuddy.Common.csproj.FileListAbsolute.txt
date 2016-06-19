@@ -1,0 +1,13 @@
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\Xionlunix.Common.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\Xionlunix.Common.pdb
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\EloBuddy.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\EloBuddy.Sandbox.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\EloBuddy.SDK.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\Newtonsoft.Json.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\SharpDX.Direct3D9.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\bin\Release\SharpDX.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\obj\Release\Xionlunix.Common.Properties.Resources.resources
+D:\Downloads\XionScripts4EB\XionBuddyCommon\obj\Release\XionBuddy.Common.csproj.GenerateResource.Cache
+D:\Downloads\XionScripts4EB\XionBuddyCommon\obj\Release\Xionlunix.Common.dll
+D:\Downloads\XionScripts4EB\XionBuddyCommon\obj\Release\Xionlunix.Common.pdb
+D:\Downloads\XionScripts4EB\XionBuddyCommon\obj\Release\XionBuddy.Common.csprojResolveAssemblyReference.cache
