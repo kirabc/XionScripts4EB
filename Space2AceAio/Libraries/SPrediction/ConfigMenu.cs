@@ -35,7 +35,7 @@ namespace Space2AcePrediction
         public static void Initialize(string prefMenuName = "Space2Ace Prediction")
         {
             s_Menu = MainMenu.AddMenu("Space2AcePrediction", prefMenuName);
-            s_Menu.Add("PREDICTONLIST", new Slider("Pred. Method (0 : XionBuddy Prediction | 1 : Elobuddy Prediction)", 0, 0, 1));
+            s_Menu.Add("PREDICTONLIST", new Slider("Pred. Method (0 : Xionlunix Prediction | 1 : Elobuddy Prediction)", 0, 0, 1));
             s_Menu.Add("SPREDWINDUP", new CheckBox("Check for target AA Windup", false));
             s_Menu.Add("SPREDMAXRANGEIGNORE", new Slider("Max Range Dodge Ignore (%)", 50));
             s_Menu.Add("SPREDREACTIONDELAY", new Slider("Ignore Rection Delay", 0, 0, 200));

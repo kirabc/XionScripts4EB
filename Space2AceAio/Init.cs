@@ -929,16 +929,19 @@ namespace Space2Ace
                                 switch (Loader.yasuo)
                                 {
                                     case 0:
-
-                                        break;
+                                    Space2Ace_Yasuo.Program.Game_OnGameLoad();
+                                    Chat.Print("Space2Ace - Champion Yasuo Loaded!");
+                                    break;
                                     case 1:
                                         break;
                                     case 2:
 
                                         break;
                                     default:
+                                    Space2Ace_Yasuo.Program.Game_OnGameLoad();
+                                    Chat.Print("Space2Ace - Champion Yasuo Loaded!");
 
-                                        break;
+                                    break;
                                 }
                                 break;
                             case "nocturne": // Underrated AIO

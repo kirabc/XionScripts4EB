@@ -212,7 +212,7 @@ namespace Space2Ace.Utility
                 }
                 if (Player.ChampionName.Equals(Champion[12]))
                 {
-                    Miscc.Add("yasuo", new ComboBox("Use addon for Yasuo : ", 0, "ValvraveSharp", "YasuoPro", "GosuMechanics"));
+                    Miscc.Add("yasuo", new ComboBox("Use addon for Yasuo : ", 0, "Space2Ace Yasuo"));
                 }
                 if (Player.ChampionName.Equals(Champion[13]))
                 {

@@ -10,12 +10,12 @@ using System.Runtime.InteropServices;
 // die einer Assembly zugeordnet sind.
 
 [assembly: AssemblyTitle("Space2Ace")]
-[assembly: AssemblyDescription("XionBuddy")]
-[assembly: AssemblyConfiguration("XionBuddy")]
-[assembly: AssemblyCompany("XionBuddy")]
+[assembly: AssemblyDescription("Xionlunix")]
+[assembly: AssemblyConfiguration("Xionlunix")]
+[assembly: AssemblyCompany("Xionlunix")]
 [assembly: AssemblyProduct("Space2Ace")]
-[assembly: AssemblyCopyright("Copyright © XionBuddy2016")]
-[assembly: AssemblyTrademark("XionBuddy")]
+[assembly: AssemblyCopyright("Copyright © Xionlunix 2016")]
+[assembly: AssemblyTrademark("Xionlunix")]
 [assembly: AssemblyCulture("")]
 
 // Durch Festlegen von ComVisible auf "false" werden die Typen in dieser Assembly unsichtbar 
@@ -38,5 +38,5 @@ using System.Runtime.InteropServices;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.10.9.7")]
-[assembly: AssemblyFileVersion("2.10.9.7")]
+[assembly: AssemblyVersion("2.11.10.7")]
+[assembly: AssemblyFileVersion("2.11.10.7")]
